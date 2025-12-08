@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as NoticesRouteImport } from './routes/notices'
 import { Route as ErrorRouteImport } from './routes/error'
 import { Route as CanvasRouteImport } from './routes/canvas'
 import { Route as ApiRouteImport } from './routes/api'
 import { Route as IndexRouteImport } from './routes/index'
 
+const NoticesRoute = NoticesRouteImport.update({
+  id: '/notices',
+  path: '/notices',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ErrorRoute = ErrorRouteImport.update({
   id: '/error',
   path: '/error',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/api': typeof ApiRoute
   '/canvas': typeof CanvasRoute
   '/error': typeof ErrorRoute
+  '/notices': typeof NoticesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/api': typeof ApiRoute
   '/canvas': typeof CanvasRoute
   '/error': typeof ErrorRoute
+  '/notices': typeof NoticesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,14 @@ export interface FileRoutesById {
   '/api': typeof ApiRoute
   '/canvas': typeof CanvasRoute
   '/error': typeof ErrorRoute
+  '/notices': typeof NoticesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api' | '/canvas' | '/error'
+  fullPaths: '/' | '/api' | '/canvas' | '/error' | '/notices'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api' | '/canvas' | '/error'
-  id: '__root__' | '/' | '/api' | '/canvas' | '/error'
+  to: '/' | '/api' | '/canvas' | '/error' | '/notices'
+  id: '__root__' | '/' | '/api' | '/canvas' | '/error' | '/notices'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +76,18 @@ export interface RootRouteChildren {
   ApiRoute: typeof ApiRoute
   CanvasRoute: typeof CanvasRoute
   ErrorRoute: typeof ErrorRoute
+  NoticesRoute: typeof NoticesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/notices': {
+      id: '/notices'
+      path: '/notices'
+      fullPath: '/notices'
+      preLoaderRoute: typeof NoticesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/error': {
       id: '/error'
       path: '/error'
@@ -107,16 +124,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiRoute: ApiRoute,
   CanvasRoute: CanvasRoute,
   ErrorRoute: ErrorRoute,
+  NoticesRoute: NoticesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
