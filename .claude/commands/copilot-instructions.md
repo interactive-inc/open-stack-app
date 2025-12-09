@@ -1,5 +1,5 @@
 ---
-description: 'Initialize or update repository documentation and gather project information.'
+description: 'ユーザと対話してcopilot-instructions.mdを初期化・更新する'
 ---
 
 # Initialize Project Documentation

@@ -34,13 +34,13 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "vaul": "^1.1.2",
-    "zod": "^4.1.12"
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
     "@interactive-inc/docs": "^1.0.14",
-    "@interactive-inc/docs-client": "^1.0.20",
-    "@modelcontextprotocol/sdk": "^1.20.0",
+    "@interactive-inc/docs-client": "^1.1.2",
+    "@modelcontextprotocol/sdk": "^1.24.3",
     "@tailwindcss/vite": "^4.1.13",
     "@tanstack/router-plugin": "^1.132.7",
     "@types/bun": "^1.2.22",
