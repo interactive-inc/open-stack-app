@@ -194,7 +194,6 @@ AI: Let me draft something like this
 *shows draft*
 AI: Is this good? I've also checked impact on other specs
 
-
 ## Task Types
 
 - Spec reading tasks
