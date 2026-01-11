@@ -117,4 +117,5 @@ const { data } = useQuery({
 
 ## TailwindCSS
 
-- Use `space-` or `gap-` instead of `pb-`
+- 縦並び: flex/grid なら `gap-{n}`、それ以外は `space-y-{n}`
+- `pt-` `pb-` で個別調整しない
