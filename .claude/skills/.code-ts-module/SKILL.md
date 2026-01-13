@@ -1,5 +1,5 @@
 ---
-name: ts-module
+name: code-ts-module
 description: Creates TypeScript modules following immutable, fluent API patterns with proper encapsulation.
 ---
 
