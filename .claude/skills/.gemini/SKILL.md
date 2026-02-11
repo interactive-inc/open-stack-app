@@ -1,6 +1,6 @@
 ---
 name: gemini
-description: 複雑な設計判断や難航している問題で、異なる視点からの意見が有効な場合に使用。アーキテクチャ選定、トレードオフ分析、原因不明のバグ調査、最適なアプローチの検討など、単一視点では見落としがありそうな場面で発動。
+description: Get alternative perspectives via Google Gemini on complex design decisions, architecture trade-offs, stuck debugging, or approach evaluation.
 user-invocable: true
 ---
 
