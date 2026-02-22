@@ -1,3 +1,7 @@
+# Claude
+.claude/tmp
+.claude/worktrees
+
 # Output
 .output
 

@@ -1,37 +1,42 @@
 {
-  "permissions": {
-    "defaultMode": "bypassPermissions",
-    "deny": ["Read(.docs)"]
-  },
   "enableAllProjectMcpServers": true,
+  "enabledPlugins": {
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "Notion@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_TASK_LIST_ID": "open-stack-app",
+    "CLAUDE_CODE_TMPDIR": ".claude/tmp"
+  },
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Bash",
         "hooks": [
           {
-            "type": "command",
-            "command": "jq -r 'if .tool_input.command | test(\"bun run dev\") then {\"decision\": \"block\", \"reason\": \"not allowed\"} else empty end'"
-          }
-        ]
-      },
-      {
-        "matcher": "Write|Edit|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r 'if .tool_input.file_path | test(\"src/components/ui/|src/hooks/use-mobile\\\\.ts$|src/lib/utils\\\\.ts$\") then {\"decision\": \"block\", \"reason\": \"not allowed - protected file\"} else empty end'"
+            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r bun run check",
+            "type": "command"
           },
           {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r bun run format"
-          },
-          {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r bun run test"
+            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r bun run test",
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "Write|Edit"
       }
     ]
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions"
   }
 }
