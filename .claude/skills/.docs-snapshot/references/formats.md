@@ -51,7 +51,7 @@ E2Eテストを生成するときにこのファイルから導線を読む。
 
 ## architecture.md
 
-システム構成を書く。技術選定の理由はproduct.mdに書くのでここには書かない。
+システム構成を書く。技術選定の理由はindex.mdに書くのでここには書かない。
 
 ```md
 # Architecture
@@ -76,7 +76,7 @@ E2Eテストを生成するときにこのファイルから導線を読む。
 - セクション: Runtime, Rendering, Data Fetching, Authentication, Styling, Caching, Error Tracking, Analytics等
 - 各セクション1-3行。長文を書かない
 - システム構成図はmermaid flowchartで書く
-- 選定理由は書かない(product.mdの技術スタックに書いてある)
+- 選定理由は書かない(index.mdの技術スタックに書いてある)
 
 ## sitemap.md
 

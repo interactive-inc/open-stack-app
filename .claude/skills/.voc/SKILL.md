@@ -19,12 +19,12 @@ If metadata is omitted, use "unknown". Date is auto-filled with today.
 
 ## Steps
 
-- Use the `.docs` skill to read product.md and understand the product vision
+- Use the `.docs` skill to read index.md and understand the product vision
 - Read `.docs/feedbacks/index.md` to grasp existing themes
 - Determine if a similar theme exists
   - **Yes**: Read that slug.md, append to `## Voices`, update `## Issues` if needed
   - **No**: Create a new slug.md
-- Cross-check against product.md vision, principles, and out-of-scope
+- Cross-check against index.md vision, principles, and out-of-scope
   - If the request is outside vision, note it in `## Issues`
 - Regenerate `index.md`
 - Report analysis briefly
@@ -65,10 +65,10 @@ Regenerated from slug.md files. Do not edit manually. Sort by voice count descen
 ```md
 # Feedbacks
 
-## {Theme name} ({N} voices) -> {slug}.md
+## {Theme name} ({N} voices) [[{slug}]]
 {One-line issue summary}
 
-## {Theme name} ({N} voices) -> {slug}.md
+## {Theme name} ({N} voices) [[{slug}]]
 {One-line issue summary}. Out of scope
 ```
 
