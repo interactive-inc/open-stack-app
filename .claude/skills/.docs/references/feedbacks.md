@@ -1,4 +1,4 @@
-# signals/
+# feedbacks/
 
 顧客の声をテーマ別に管理する。voiceスキルで追記する。
 
