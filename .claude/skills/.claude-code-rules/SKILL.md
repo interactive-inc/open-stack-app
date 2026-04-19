@@ -2,6 +2,8 @@
 name: claude-code-rules
 description: "Extract and record coding patterns, conventions, and design rules from codebase into local rule files. Called by other skills or explicitly via command."
 disable-model-invocation: true
+metadata:
+  author: shigurenimo
 ---
 
 # Infer Code Rules
