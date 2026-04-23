@@ -1,7 +1,9 @@
 ---
 name: docs
-description: Documentation management for .docs/ directory. Manages product specs, decisions, backlogs, and signals. Keeps docs in sync with code. Product thinking and design principles are in the software-design skill.
+description: Documentation management for .docs/ directory. Manages product specs, decisions, backlogs, and signals, keeping docs in sync with code.
+when_to_use: Use when writing or maintaining product docs under .docs/ (specs, decisions, backlogs, signals). Product thinking and design principles are in the software-design skill.
 metadata:
+  description: .docs/ 配下の製品ドキュメント（仕様・意思決定・バックログ・顧客の声）を管理し、コードと矛盾がない状態を保つ。
   author: shigurenimo
   dev: true
 ---

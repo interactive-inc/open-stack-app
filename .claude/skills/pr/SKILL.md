@@ -1,10 +1,12 @@
 ---
 name: pr
-description: "?"
+description: Implement against an Issue plan and open a PR with verification and debug phases, recording only implementation results in the PR.
+when_to_use: Invoke when implementing a GitHub Issue and creating its Pull Request. Accepts an Issue number argument or resolves from conversation context.
 user_invocable: true
 arguments: Issue 番号
 metadata:
   author: shigurenimo
+  description: Issue の計画に基づいて実装し、verification・debug を経て PR を作成するスキル。PR には実装結果のみを記録する。
   dev: true
 ---
 
