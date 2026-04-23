@@ -1,7 +1,6 @@
 ---
 name: issue
-description: "[number|description] Investigate and plan GitHub Issues."
-disable-model-invocation: true
+description: "?"
 metadata:
   author: shigurenimo
   dev: true

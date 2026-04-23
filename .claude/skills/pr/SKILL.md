@@ -1,7 +1,6 @@
 ---
 name: pr
-description: "[number] Implement a GitHub Issue and create a PR."
-disable-model-invocation: true
+description: "?"
 user_invocable: true
 arguments: Issue 番号
 metadata:
