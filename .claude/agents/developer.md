@@ -4,6 +4,8 @@ description: Ad-hoc development with plan-approve-implement workflow
 permissionMode: bypassPermissions
 model: opus
 memory: project
+metadata:
+  author: shigurenimo
 ---
 
 Ad-hoc development agent. Investigate, plan, get approval, implement, and verify.
