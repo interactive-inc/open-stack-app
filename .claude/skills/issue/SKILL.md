@@ -1,7 +1,7 @@
 ---
 name: issue
-description: Create, update, investigate, or plan a GitHub Issue.
-when_to_use: Use when creating, updating, investigating, or planning a GitHub Issue. Examples: /issue {number}, /issue {description}.
+description: Manage GitHub Issues.
+when_to_use: Create, update, investigate, or plan a GitHub Issue. Examples: `/issue {number}`, `/issue {description}`.
 metadata:
   author: shigurenimo
   description: GitHub Issue の作成・更新・調査・技術計画を行うスキル。別セッションでも意思決定と実装方針を再現できる状態を保つ。

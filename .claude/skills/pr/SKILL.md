@@ -1,7 +1,7 @@
 ---
 name: pr
-description: Implement against an Issue plan and open a PR with verification and debug phases, recording only implementation results in the PR.
-when_to_use: Invoke when implementing a GitHub Issue and creating its Pull Request. Accepts an Issue number argument or resolves from conversation context.
+description: Implement an Issue and open its PR.
+when_to_use: Implementing a GitHub Issue and creating its PR. Takes Issue number or context.
 user_invocable: true
 arguments: Issue 番号
 metadata:

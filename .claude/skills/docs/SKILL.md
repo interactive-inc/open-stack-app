@@ -1,7 +1,7 @@
 ---
 name: docs
-description: Documentation management for .docs/ directory covering specs, decisions, backlogs, and signals.
-when_to_use: Use when writing or maintaining product docs under .docs/.
+description: .docs/ documentation management.
+when_to_use: Writing or maintaining product docs under .docs/.
 user-invocable: true
 disable-model-invocation: false
 metadata:
