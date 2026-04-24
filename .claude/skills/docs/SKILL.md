@@ -54,11 +54,13 @@ metadata:
 ## 2種類の情報
 
 人間が書くもの（コードから読み取れない）:
+
 - index.md: 製品の方向性、ペルソナ、ジョブ、意思決定プロセス（software-design スキルの顧客理解をここに記録する）
 - glossary.md, backlogs/, decisions/, signals/, notes/
 - なぜそうしたか、何を作るべきか、ユーザーの声
 
 コードから生成するもの:
+
 - features.md, user-flows.md
 - 必要に応じて architecture.md, sitemap.md, domain-model.md も追加
 
