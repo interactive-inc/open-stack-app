@@ -13,8 +13,9 @@ RyukyuInteractive/inta:
   - .claude/skills/docs/references/signals.md
   - .claude/skills/docs/references/validation.md
   - .claude/skills/docs/references/writing-rules.md
-  - .claude/skills/issue/SKILL.md
-  - .claude/skills/pr/SKILL.md
+  - .claude/skills/gh-issue-template/SKILL.md
+  - .claude/skills/triage/SKILL.md
+  - .claude/skills/triage/references/screenshot-upload.md
   - .github/ISSUE_TEMPLATE.md
   - .github/PULL_REQUEST_TEMPLATE.md
   - .github/instructions/ts.instructions.md
