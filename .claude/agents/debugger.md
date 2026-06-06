@@ -2,7 +2,7 @@
 name: debugger-code
 description: Hunt for bugs, code quality issues, and improvement opportunities in the codebase
 permissionMode: bypassPermissions
-model: opus
+model: claude-opus-4-7
 memory: project
 metadata:
   author: shigurenimo
