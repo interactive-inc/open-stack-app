@@ -41,6 +41,7 @@ RyukyuInteractive/inta#open-artifacts:
   - .claude/rules/ts.md
   - .claude/skills/docs/SKILL.md
   - .claude/skills/docs/commands/drift.md
+  - .claude/skills/docs/commands/features-sync.md
   - .claude/skills/docs/commands/links.md
   - .claude/skills/docs/commands/next.md
   - .claude/skills/docs/references/api-schema.md
@@ -57,6 +58,7 @@ RyukyuInteractive/inta#open-artifacts:
   - .claude/skills/docs/references/integrations.md
   - .claude/skills/docs/references/manual.md
   - .claude/skills/docs/references/milestones.md
+  - .claude/skills/docs/references/notes.md
   - .claude/skills/docs/references/page-capabilities.md
   - .claude/skills/docs/references/pages.md
   - .claude/skills/docs/references/roles-and-permissions.md
