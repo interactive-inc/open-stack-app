@@ -34,8 +34,6 @@ RyukyuInteractive/inta:
   - .github/PULL_REQUEST_TEMPLATE.md
   - .github/instructions/ts.instructions.md
 RyukyuInteractive/inta#open-artifacts:
-  - .claude/agents/debugger.md
-  - .claude/agents/developer.md
   - .claude/agents/hacker.md
   - .claude/rules/md.md
   - .claude/rules/ts.md
