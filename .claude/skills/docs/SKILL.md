@@ -167,4 +167,4 @@ metadata:
 
 ## 開発サイクルでの使い方
 
-software-design スキルを参照。
+product プラグインの dev スキル（設計章）を参照。
