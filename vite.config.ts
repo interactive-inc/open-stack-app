@@ -1,6 +1,5 @@
-import { resolve } from "node:path"
 import tailwindcss from "@tailwindcss/vite"
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite"
+import { tanstackStart } from "@tanstack/react-start/plugin/vite"
 import viteReact from "@vitejs/plugin-react"
 import { defineConfig } from "vite-plus"
 
@@ -22,10 +21,11 @@ export default defineConfig({
   test: {
     passWithNoTests: true,
   },
-  resolve: { alias: { "@": resolve(__dirname, "./src") } },
+  resolve: { alias: { "@": "/src" } },
   plugins: [
-    TanStackRouterVite({
-      generatedRouteTree: "./src/route-tree.gen.ts",
+    tanstackStart({
+      spa: { enabled: false },
+      router: { generatedRouteTree: "route-tree.gen.ts" },
     }),
     viteReact(),
     tailwindcss(),

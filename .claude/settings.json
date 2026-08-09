@@ -24,11 +24,11 @@
       {
         "hooks": [
           {
-            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r bun run check",
+            "command": "if jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | rg -q .; then vp run check; fi",
             "type": "command"
           },
           {
-            "command": "jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | xargs -r vp test",
+            "command": "if jq -r '.tool_input.file_path | select(endswith(\".ts\") or endswith(\".tsx\"))' | rg -q .; then vp test; fi",
             "type": "command"
           }
         ],

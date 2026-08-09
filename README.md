@@ -9,7 +9,7 @@ vp install
 vp dev
 ```
 
-UIライブラリは以下で最新に保つ事ができます。
+依存関係は以下で更新できます。
 
 ```
 make update
