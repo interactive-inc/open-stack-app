@@ -87,9 +87,7 @@ function Component() {
         </Card>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-center">
-            お知らせ一覧 ({notices.length}件)
-          </h2>
+          <h2 className="text-2xl font-semibold text-center">お知らせ一覧 ({notices.length}件)</h2>
           {notices.length === 0 ? (
             <Card className="shadow-md">
               <CardContent className="p-12 text-center text-muted-foreground">

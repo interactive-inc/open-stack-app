@@ -21,10 +21,15 @@ color: purple
 
 ```markdown
 # Title
+
 This is text.
+
 ## Section
+
 ### Subsection
+
 #### Too deep heading
+
 Content here.
 ```
 

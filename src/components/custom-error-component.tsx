@@ -1,11 +1,5 @@
 import type { ErrorComponentProps } from "@tanstack/react-router"
-import {
-  ErrorComponent,
-  Link,
-  rootRouteId,
-  useMatch,
-  useRouter,
-} from "@tanstack/react-router"
+import { ErrorComponent, Link, rootRouteId, useMatch, useRouter } from "@tanstack/react-router"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 

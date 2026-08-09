@@ -25,7 +25,7 @@ Modern React application with TanStack Router and component library. Features ro
 - React 19 with TypeScript
 - shadcn/ui component system
 - Tailwind CSS v4 for styling
-- Vite for build tooling
-- Bun for package management and testing
-- Biome for linting and formatting
+- Vite+ for build tooling
+- Bun runtime and package manager (managed through Vite+)
+- Vite+ for linting, formatting, and testing
 - Model Context Protocol for documentation

@@ -20,9 +20,11 @@ Claude Codeのhooks設定では、jqコマンドをJSON文字列として一行�
 ### 解析時の課題
 
 1. **多重エスケープの処理**
+
    ```json
    "command": "jq -r 'if .tool_input.command | test(\"bun run dev\") then {\"decision\": \"block\", \"reason\": \"not allowed\"} else empty end'"
    ```
+
    上記のように、JSON内でjqコマンドを記述すると、クォートのエスケープが必要になる。
 
 2. **改行の扱い**

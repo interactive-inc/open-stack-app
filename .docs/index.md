@@ -14,6 +14,7 @@ schema: {}
 ## Products
 
 ### Sample App
+
 基本的な機能を実装したサンプルアプリケーション
 
 ## Target Users

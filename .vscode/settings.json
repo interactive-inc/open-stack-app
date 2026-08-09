@@ -1,9 +1,13 @@
 {
+  "npm.scriptRunner": "vp",
+  "oxc.fmt.disableNestedConfig": true,
+  "oxc.disableNestedConfig": true,
+  "editor.formatOnSaveMode": "file",
   "[typescript][typescriptreact][json][css]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.biome": "explicit"
+      "source.fixAll.oxc": "explicit"
     },
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnSave": true
   },
   "files.associations": {
@@ -31,9 +35,6 @@
     "bun.lock": true
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "react-day-picker",
-    "radix-ui"
-  ],
+  "typescript.preferences.autoImportFileExcludePatterns": ["react-day-picker", "radix-ui"],
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }

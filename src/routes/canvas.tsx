@@ -50,11 +50,7 @@ function RouteComponent() {
         x: Math.floor(Math.random() * state.gridSize),
         y: Math.floor(Math.random() * state.gridSize),
       }
-    } while (
-      state.snake.some(
-        (segment) => segment.x === newFood.x && segment.y === newFood.y,
-      )
-    )
+    } while (state.snake.some((segment) => segment.x === newFood.x && segment.y === newFood.y))
     return newFood
   }, [])
 
@@ -120,23 +116,14 @@ function RouteComponent() {
         head.y += state.direction.y
 
         // Check wall collision
-        if (
-          head.x < 0 ||
-          head.x >= state.gridSize ||
-          head.y < 0 ||
-          head.y >= state.gridSize
-        ) {
+        if (head.x < 0 || head.x >= state.gridSize || head.y < 0 || head.y >= state.gridSize) {
           state.gameOver = true
           setDisplayState((prev) => ({ ...prev, gameOver: true }))
           return
         }
 
         // Check self collision
-        if (
-          state.snake.some(
-            (segment) => segment.x === head.x && segment.y === head.y,
-          )
-        ) {
+        if (state.snake.some((segment) => segment.x === head.x && segment.y === head.y)) {
           state.gameOver = true
           setDisplayState((prev) => ({ ...prev, gameOver: true }))
           return
@@ -167,18 +154,12 @@ function RouteComponent() {
       for (let i = 0; i <= state.gridSize; i++) {
         context.beginPath()
         context.moveTo(offsetX + i * state.cellSize, offsetY)
-        context.lineTo(
-          offsetX + i * state.cellSize,
-          offsetY + state.gridSize * state.cellSize,
-        )
+        context.lineTo(offsetX + i * state.cellSize, offsetY + state.gridSize * state.cellSize)
         context.stroke()
 
         context.beginPath()
         context.moveTo(offsetX, offsetY + i * state.cellSize)
-        context.lineTo(
-          offsetX + state.gridSize * state.cellSize,
-          offsetY + i * state.cellSize,
-        )
+        context.lineTo(offsetX + state.gridSize * state.cellSize, offsetY + i * state.cellSize)
         context.stroke()
       }
 
@@ -216,18 +197,10 @@ function RouteComponent() {
         context.fillText("GAME OVER", canvas.width / 2, canvas.height / 2 - 20)
 
         context.font = "24px monospace"
-        context.fillText(
-          `Score: ${state.score}`,
-          canvas.width / 2,
-          canvas.height / 2 + 20,
-        )
+        context.fillText(`Score: ${state.score}`, canvas.width / 2, canvas.height / 2 + 20)
 
         context.font = "16px monospace"
-        context.fillText(
-          "Press R to restart",
-          canvas.width / 2,
-          canvas.height / 2 + 60,
-        )
+        context.fillText("Press R to restart", canvas.width / 2, canvas.height / 2 + 60)
       }
     },
     [generateFood],
